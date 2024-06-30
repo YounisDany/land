@@ -7,17 +7,34 @@
     <style>
         body {
             font-family: 'Arial, sans-serif';
-            background-color: #e6e6e6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e0e0e0 100%);
             color: #333;
             text-align: center;
             direction: rtl;
+            margin: 0;
+            padding: 0;
         }
         .container {
             margin-top: 50px;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        p {
+            color: #6c757d;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .location {
             margin: 20px 0;
             font-size: 1.5em;
+            color: #17a2b8;
+            animation: fadeInUp 1s ease-in-out;
         }
         .responsible {
             display: flex;
@@ -25,12 +42,39 @@
             justify-content: center;
             margin: 10px 0;
             font-size: 1.2em;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .responsible:hover {
+            transform: scale(1.05);
+            background: #e9ecef;
         }
         .responsible img {
             width: 30px;
             height: 30px;
             margin-left: 10px;
             cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .responsible img:hover {
+            transform: rotate(20deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -41,29 +85,37 @@
         <div class="location">📍 موقع التوفير لاند</div>
         <div class="location">📍 موقع المستودع</div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/1234567890'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0559808756'">
             مسؤول مشتريات المواد الغذائية
         </div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0987654321'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0507223416'">
             مسؤول مشتريات الأواني المنزلية
         </div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/1122334455'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0555038876'">
             مسؤول مشتريات الملابس
         </div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/5544332211'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0556035177'">
             مسؤول مشتريات الإكسسوارات
         </div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/6677889900'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0539666255'">
             مسؤول الصالة
         </div>
         <div class="responsible">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/9988776655'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0508080958'">
             مسؤول المستودع
         </div>
     </div>
 </body>
 </html>
+"""
+
+# Saving the updated HTML code with animations and better design to a file
+animated_file_path = "/mnt/data/tawfeer_land_animated.html"
+with open(animated_file_path, "w") as file:
+    file.write(html_code_updated)
+
+animated_file_path
