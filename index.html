@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: 'Arial, sans-serif';
-            background: linear-gradient(135deg, #f8f9fa 0%, #e0e0e0 100%);
-            color: #333;
+            background-color: #6E675B; /* لون خلفية جديد */
+            color: #fff;
             text-align: center;
             direction: rtl;
             margin: 0;
@@ -19,13 +19,13 @@
             padding: 20px;
         }
         h1 {
-            color: #007bff;
+            color: #fff;
             font-size: 2.5em;
             margin-bottom: 20px;
             animation: fadeInDown 1s ease-in-out;
         }
         p {
-            color: #6c757d;
+            color: #fff;
             font-size: 1.2em;
             margin-bottom: 40px;
             animation: fadeIn 1.5s ease-in-out;
@@ -35,6 +35,7 @@
             font-size: 1.5em;
             color: #17a2b8;
             animation: fadeInUp 1s ease-in-out;
+            cursor: pointer;
         }
         .responsible {
             display: flex;
@@ -48,6 +49,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, background 0.3s;
             animation: fadeInUp 1s ease-in-out;
+            color: #333;
         }
         .responsible:hover {
             transform: scale(1.05);
@@ -82,8 +84,8 @@
     <div class="container">
         <h1>أهلا بك في التوفير لاند</h1>
         <p>إنقر على الأيقونة للإنتقال</p>
-        <div class="location">📍 موقع التوفير لاند</div>
-        <div class="location">📍 موقع المستودع</div>
+        <div class="location" onclick="window.location.href='https://maps.app.goo.gl/pZ4ifCiwz9gnQN569'">📍 موقع التوفير لاند</div>
+        <div class="location" onclick="window.location.href='https://maps.app.goo.gl/eUNstVXA4e2WNvfa7?g_st=com.google.maps.preview.copy'">📍 موقع المستودع</div>
         <div class="responsible">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" onclick="window.location.href='https://wa.me/0559808756'">
             مسؤول مشتريات المواد الغذائية
@@ -113,9 +115,13 @@
 </html>
 """
 
-# Saving the updated HTML code with animations and better design to a file
-animated_file_path = "/mnt/data/tawfeer_land_animated.html"
-with open(animated_file_path, "w") as file:
-    file.write(html_code_updated)
+# Saving the final updated HTML code with the new background color to a file
+final_color_file_path = "/mnt/data/tawfeer_land_final_with_color.html"
+with open(final_color_file_path, "w") as file:
+    file.write(html_code_final)
 
-animated_file_path
+final_color_file_path
+
+لقد قمت بتحديث الكود ليشمل لون الخلفية المستخرج من الصورة. يمكنك تنزيل الملف المحدث وعرضه على متصفحك لرؤية الناتج.
+
+[تحميل الملف المحدث مع لون الخلفية الجديد](sandbox:/mnt/data/tawfeer_land_final_with_color.html?_chatgptios_conversationID=47623f50-1227-483c-ba74-df5590c1bfcb&_chatgptios_messageID=8b3eaa29-f274-439d-b232-e95832e2f4fd) |oai:code-citation|
